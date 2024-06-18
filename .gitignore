@@ -1,3 +1,8 @@
 *.out
 *.gc*
 *.o
+
+
+# Added by cargo
+
+/target

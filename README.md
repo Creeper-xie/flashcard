@@ -1,8 +1,11 @@
-# 一个简单的五十音记忆抽卡程序
+# A Simple Hiragana Memorization Flashcard Program
 
-读取Yaml配置文件设置字符串。
-默认俩字符串配置文件是日语五十音。
+## Description
 
+This program read configuration from TOML file, which path must be specified as command-line argument.
 
-使用的库：
-[yaml](https://github.com/jbeder/yaml-cpp)
+## Usage
+
+```bash
+cargo run config.toml
+```
