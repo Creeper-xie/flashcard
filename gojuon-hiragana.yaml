@@ -1,0 +1,14 @@
+name: 'Gojuon（日语五十音）- 平假名'
+description: '日语五十音-平假名'
+clear_screen_after_a_question: false
+map:
+  あ: a
+  か: ka
+  さ: sa
+  た: ta
+  な: na
+  は: ha
+  ま: ma
+  や: ya
+  ら: ra
+  わ: wa
