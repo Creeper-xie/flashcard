@@ -1,6 +1,7 @@
 name: 'Gojuon（日语五十音）- 平假名'
-description: '日语五十音-平假名'
-clear_screen_after_a_question: false
+description: '日语五十音-平假名 \n '
+show_map:
+  clear_screen_after_show: false
 map:
   あ: a
   か: ka
