@@ -1,3 +1,4 @@
 *.out
 *.gc*
 *.o
+/target

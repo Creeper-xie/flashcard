@@ -1,7 +1,11 @@
 name: 'Gojuon（日语五十音）- 平假名'
 description: '日语五十音-平假名 \n '
 show_map:
-  clear_screen_after_show: false
+  enable: true
+  clear_screen_after_show: true
+time_out: 20
+lose_massage: '杂鱼杂鱼~这都不会~❤️'
+win_massage: '哦哟~看来杂鱼还有点强...但还是杂鱼呢❤️~'
 map:
   あ: a
   か: ka
