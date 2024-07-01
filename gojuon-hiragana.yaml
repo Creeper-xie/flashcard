@@ -1,19 +1,15 @@
 name: 'Gojuon（日语五十音）- 平假名'
 description: '日语五十音-平假名 \n '
-show_map:
-  enable: true
-  clear_screen_after_show: true
-time_out: 20
-lose_massage: '杂鱼杂鱼~这都不会~❤️'
-win_massage: '哦哟~看来杂鱼还有点强...但还是杂鱼呢❤️~'
+wrong_message: '杂鱼杂鱼~这都不会~❤️'
+right_message: '正确~'
 map:
-  あ: a
-  か: ka
-  さ: sa
-  た: ta
-  な: na
-  は: ha
-  ま: ma
-  や: ya
-  ら: ra
-  わ: wa
+  あ: 'a'
+  か: 'ka'
+  さ: 'sa'
+  た: 'ta'
+  な: 'na'
+  は: 'ha'
+  ま: 'ma'
+  や: 'ya'
+  ら: 'ra'
+  わ: 'wa'
