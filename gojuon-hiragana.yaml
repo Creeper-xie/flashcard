@@ -1,6 +1,6 @@
 name: 'Gojuon（日语五十音）- 平假名'
-description: '日语五十音-平假名 \n '
-wrong_message: '杂鱼杂鱼~这都不会~❤️'
+description: '日语五十音-平假名  '
+wrong_message: '杂鱼杂鱼~这都不会~❤️,正确答案是-----   '
 right_message: '正确~'
 map:
   あ: 'a'

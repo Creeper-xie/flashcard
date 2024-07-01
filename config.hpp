@@ -35,8 +35,8 @@ public:
         if (location == 0) return map.begin() -> second.as<string>();
         return std::next(map.begin(),location) -> second.as<string>();
     }
-    void print_wrong_message(){
-        std::println("{}",wrong_message);
+    void print_wrong_message(string correct){
+        std::println("{}{}",wrong_message,correct);
     }
     void print_right_message(){
         std::println("{}",right_message);

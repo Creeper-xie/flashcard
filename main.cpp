@@ -30,7 +30,7 @@ int main(const int argc,const char* argv[]){
         std::println("第 {} 个是 {} 哦",std::to_string(all_times),_config.get_map_first(random_num));
         std::cin >> input;
         if ( input != _config.get_map_second(random_num)){
-            _config.print_wrong_message();
+            _config.print_wrong_message(_config.get_map_second(random_num));
             wrong_times++;
         }   else if(input == _config.get_map_second(random_num)){
             _config.print_right_message();
