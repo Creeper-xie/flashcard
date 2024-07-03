@@ -2,3 +2,16 @@
 *.gc*
 *.o
 /target
+Makefile*
+configure*
+*.in
+*.in~
+/stamp-h1
+/autom4te.cache
+flashcard
+*.log
+.deps
+config.status
+config.h.in
+config.h
+Makefile~
