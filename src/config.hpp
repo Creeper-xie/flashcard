@@ -7,8 +7,8 @@ using std::string;
 namespace cx{
 class config {
 public:
-    config(string file_name) 
-        : config_file_name(file_name),
+    config(string file_name) :
+         config_file_name(file_name),
          config_f(YAML::LoadFile(config_file_name)),
          map(config_f["map"]),
          name(config_f["name"].as<string>()),
