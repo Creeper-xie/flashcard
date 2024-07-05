@@ -8,15 +8,15 @@ namespace cx{
 class config {
 public:
     config(string file_name) 
-        : config_file_name(file_name)
-        , config_f(YAML::LoadFile(config_file_name))
-        , map(config_f["map"])
-        , name(config_f["name"].as<string>())
-        , description(config_f["description"].as<string>())
-        , wrong_message(config_f["wrong_message"].as<string>())
-        , right_message(config_f["right_message"].as<string>())
+        : config_file_name(file_name),
+         config_f(YAML::LoadFile(config_file_name)),
+         map(config_f["map"]),
+         name(config_f["name"].as<string>()),
+         description(config_f["description"].as<string>()),
+         wrong_message(config_f["wrong_message"].as<string>()),
+         right_message(config_f["right_message"].as<string>())
         {
-//        config_f = YAML::Null;
+        config_f = YAML::Null;
     };
     string get_name(){
         return name;
