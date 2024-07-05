@@ -11,6 +11,7 @@ configure*
 /m4
 flashcard
 *.log
+aclocal.m4
 .deps
 config.status
 config.h.in
