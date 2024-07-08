@@ -5,29 +5,28 @@
 
 #include "config.hpp"
 
+namespace cx{
 using std::string;
-     const void init_config(string file_name){
-          const string config_file_name = file_name;
+    cx::Config::Config(YAML::Node config_source) : 
+        map(config_source["map"]),
+        name(config_source["name"].as<string>()),
+        description(config_source["description"].as<string>()),
+        wrong_message(config_source["wrong_message"].as<string>()),
+        right_message(config_source["right_message"].as<string>())
         {
-            const YAML::Node config_sources = YAML::LoadFile(config_file_name);
-             const YAML::Node map = config_sources["map"];
-             const string name = config_sources["name"].as<string>();
-             const string description = config_sources["description"].as<string>();
-             const string wrong_message = config_sources["wrong_message"].as<string>();
-             const string right_message = config_sources["right_message"].as<string>();
-        }
-    }
-     const string get_map_first(const uint location){
-        if (location == 0) return map.begin() -> first.as<string>();
+            if(map.IsNull()) std::println("配置文件加载失败QAQ"); 
+}
+
+    const string cx::Config::get_map_first(const uint location){
         return std::next(map.begin(),location) -> first.as<string>();
     }
-     const string get_map_second(const uint location){
-        if (location == 0) return map.begin() -> second.as<string>();
+    const string cx::Config::get_map_second(const uint location){
         return std::next(map.begin(),location) -> second.as<string>();
     }
-     const void print_wrong_message(string correct){
+    void cx::Config::print_wrong_message(string correct){
         std::println("{}{}",wrong_message,correct);
     }
-     const void print_right_message(){
+    void cx::Config::print_right_message(){
         std::println("{}",right_message);
     }
+}
