@@ -16,7 +16,11 @@
 
 ## 构建
 
-> g++ -std=gnu++23 -lyaml-cpp main.cpp
+``` shell
+cd src
+g++ -std=gnu++23 -O3 -Iinclude -c config.cpp main.cpp random.cpp
+g++ -std=gnu++23 -O3 -Ofast -o flashcard  main.o random.o config.o -lyaml-cpp
+```
 
 使用Rust重写的分支：
 [Rewrite in Rust](https://github.com/Creeper-xie/flashcard/tree/rust)
