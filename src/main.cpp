@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <cassert>
 #include <iostream>
 #include <print>
@@ -12,7 +13,7 @@ static uint all_times = 0;
 static uint right_times = 0;
 static uint wrong_times = 0;
 static string input;
-int random_num;
+uint random_num;
 
 int main(const int argc,const char* argv[]){
 //    std::vector<std::string> args(argv + 1, argv + argc);
@@ -20,7 +21,7 @@ int main(const int argc,const char* argv[]){
     std::println("没有指定配置文件！请使用命令行参数！\n 示例：\n ./本程序 配置文件");
     return -1;
     }
-    struct Config config(YAML::LoadFile(argv[1]));
+    struct Config config(YAML::LoadFile(std::move(argv[1])));
 
     std::println("配置文件加载成功喵！QwQ\n 名字：{} \n 描述：{}",
     config.name.data(),
@@ -29,12 +30,12 @@ int main(const int argc,const char* argv[]){
     while(true){
         random_num = get_random(0,config.map.size() - 1);
         all_times++;
-        std::println("第 {} 个是 {} 哦",std::to_string(all_times),config.get_map_first(random_num));
+        std::println("第 {} 个是 {} 哦",std::to_string(all_times),config.get_map_first(&random_num));
         std::cin >> input;
-        if ( input != config.get_map_second(random_num)){
-            config.print_wrong_message(config.get_map_second(random_num));
+        if ( input != config.get_map_second(&random_num)){
+            config.print_wrong_message(config.get_map_second(&random_num));
             wrong_times++;
-        }   else if(input == config.get_map_second(random_num)){
+        }   else if(input == config.get_map_second(&random_num)){
             config.print_right_message();
             right_times++;
         }

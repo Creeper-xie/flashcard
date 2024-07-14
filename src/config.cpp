@@ -17,11 +17,11 @@ using std::string;
             if(map.IsNull()) std::println("配置文件加载失败QAQ"); 
 }
 
-    const string cx::Config::get_map_first(const uint location){
-        return std::next(map.begin(),location) -> first.as<string>();
+    const string cx::Config::get_map_first(const uint* location){
+        return std::next(map.begin(),*location) -> first.as<string>();
     }
-    const string cx::Config::get_map_second(const uint location){
-        return std::next(map.begin(),location) -> second.as<string>();
+    const string cx::Config::get_map_second(const uint* location){
+        return std::next(map.begin(),*location) -> second.as<string>();
     }
     void cx::Config::print_wrong_message(string correct){
         std::println("{}{}",wrong_message,correct);
